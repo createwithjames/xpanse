@@ -15,7 +15,7 @@
   publish = "./storage/app/static"
 
   # Default build command.
-  command = "composer build"
+  command = "composer build && php please ssg:generate"
 
 [context.production.environment]
   #PHP_VERSION="8.0"
