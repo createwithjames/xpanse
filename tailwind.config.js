@@ -66,7 +66,7 @@ export default {
     },
 
     plugins: [
-        require("@tailwindcss/typography", "@tailwindcss/forms"),
+        require("@tailwindcss/typography", "@tailwindcss/forms", "@tailwindcss/typography"),
         iconsPlugin({
             // Select the icon collections you want to use
             // You can also ignore this option to automatically discover all icon collections you have installed
