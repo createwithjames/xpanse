@@ -3,9 +3,15 @@
 @import "tailwindcss/utilities";
 
 /* This is all you. */
-.link {
+.link,
+.link--shamrock {
     position: relative;
     overflow: hidden;
+}
+
+.link:hover::after,
+.link-shamrock:hover::after {
+    width: 100%;
 }
 
 .link::after {
@@ -19,8 +25,15 @@
     transition: width 0.3s ease;
 }
 
-.link:hover::after {
-    width: 100%;
+.link-shamrock::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #33cc99;
+    transition: width 0.3s ease;
 }
 
 .fade {
