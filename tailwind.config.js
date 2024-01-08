@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+const {
+    iconsPlugin,
+    getIconCollections,
+} = require("@egoist/tailwindcss-icons");
+
 export default {
     content: [
         "./resources/**/*.antlers.html",
@@ -60,5 +65,12 @@ export default {
         },
     },
 
-    plugins: [require("@tailwindcss/typography", "@tailwindcss/forms")],
+    plugins: [
+        require("@tailwindcss/typography", "@tailwindcss/forms"),
+        iconsPlugin({
+            // Select the icon collections you want to use
+            // You can also ignore this option to automatically discover all icon collections you have installed
+            collections: getIconCollections(["material-symbols", "lucide"]),
+        }),
+    ],
 };
